@@ -1,0 +1,116 @@
+@function px($px) {
+  @return $px / 2 * 1rpx;
+}
+
+//设置宽高
+@mixin wh($width: 100%, $height: 100%) {
+  width: $width;
+  height: $height;
+}
+
+//设置背景图
+@mixin bgImg($file, $name, $type: png, $size: auto) {
+  background: url("../assets/#{$file}/#{$name}.#{$type}") no-repeat;
+  background-size: 100% $size;
+}
+
+@mixin bg($color: #fff) {
+  background: $color;
+}
+//阴影
+@mixin shadow($color) {
+  box-shadow: $color;
+}
+@mixin size($number: 12px) {
+  font-size: $number;
+}
+//设置行高
+@mixin lh($height) {
+  line-height: $height;
+}
+
+@mixin ta($key: center) {
+  text-align: $key;
+}
+@mixin va($fx: middle) {
+  vertical-align: $fx;
+}
+//圆弧
+@mixin radius($deg) {
+  border-radius: $deg;
+}
+// 设置形变距离
+@mixin move($x, $y) {
+  transform: translate($x, $y);
+}
+//旋转
+@mixin rotate($deg) {
+  transform: rotate($deg);
+}
+
+// 溢出隐藏
+@mixin ellipsis($w) {
+  width: $w;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.w {
+  margin: 0 auto;
+}
+.pr {
+  position: relative;
+}
+.pf {
+  position: fixed;
+}
+.pa {
+  position: absolute;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.pointer {
+  cursor: pointer;
+}
+.dib {
+  display: inline-block;
+}
+.db {
+  display: block;
+}
+.table {
+  display: table-cell;
+}
+//显示
+.block {
+  display: block;
+}
+//隐藏
+.none {
+  display: none;
+}
+
+//修改input的pleacher颜色
+@mixin placeholder($color: #aaaaaa) {
+  &::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    color: $color;
+  }
+  &::-moz-placeholder {
+    /* Firefox 19+ */
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    /* IE 10+ */
+    color: $color;
+  }
+  &:-moz-placeholder {
+    /* Firefox 18- */
+    color: $color;
+  }
+}

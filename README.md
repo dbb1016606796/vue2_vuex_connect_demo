@@ -1,0 +1,2 @@
+# vue2_vuex_connect_demo
+vue2的项目，使用了vuex3，使用connect函数来进行组件和vuex的链接
